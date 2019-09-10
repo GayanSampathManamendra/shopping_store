@@ -1,0 +1,131 @@
+<div>
+    <app-nav-bar></app-nav-bar>
+</div>
+<div>
+    <div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                        <div class="row">
+                                <div class="col-md-8">
+                                        <select class="browser-default custom-select" aria-placeholder="Select the item category" >
+                                            <option value disabled>Select the item category</option>
+                                            <option value="clothes">Clothes</option>
+                                            <option value="electronics">Electronics</option>
+                                            <option value="educational">Educational</option>
+                                        </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <button mdbBtn type="button" color="info" rounded="true" outline="true"  (click)="print()" mdbWavesEffect>Search</button>
+                                </div>
+                        </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="card card-cascade wider reverse">
+
+        <!-- Card image -->
+        <div class="view view-cascade overlay">
+        <!--heder-->
+            <app-dashboad-header></app-dashboad-header>
+        </div>
+        
+        <!-- Card content -->
+        <div class="card-body card-body-cascade text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h1>Clothes</h1>
+                    <hr>
+                    
+                    <div class="row">
+                        <div  *ngFor="let clothItem of clothsItems">
+                                <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a routerLink="/item/info/{{clothItem.id}}">
+                                                    <h3>{{clothItem.item_name}}</h3>
+                                                </a>
+                                            
+                                                <p>{{clothItem.price}}</p>
+                                                <a href="https://sandbox.payhere.lk/account/">
+                                                    <button type="button" class="btn btn-primary btn-lg btn-rounded text-lg" >
+                                                        <i class="fas fa-money-bill"></i> Buy Now
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                    </div> 
+                </div>
+            </div>
+        
+        </div>
+        <div class="card-body card-body-cascade text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h1>Electronics</h1>
+                    <hr>
+                    <div class="row">
+                        <div *ngFor="let electronic of electronics">
+                                <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a routerLink="/item/info/{{electronic.id}}">
+                                                    <h3>{{electronic.item_name}}</h3>
+                                                </a>
+                                                
+                                                <p>{{electronic.price}}</p>
+                                                <a href="https://sandbox.payhere.lk/account/">
+                                                    <button type="button" class="btn btn-primary btn-lg btn-rounded text-lg" >
+                                                        <i class="fas fa-money-bill"></i> Buy Now
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+                
+        </div>
+        <div class="card-body card-body-cascade text-center">
+                <div class="card">
+                <div class="card-body">
+                    <h1>Educational</h1>
+                    <hr>
+                    
+                    <div class="row">
+                        <div *ngFor="let educationalItem of educational">
+                                <div class="col-md-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <a routerLink="/item/info/{{educationalItem.id}}">
+                                                    <h3>{{educationalItem.item_name}}</h3>
+                                                </a>
+                                             
+                                                <p>{{educationalItem.price}}</p>
+                                                <a href="https://sandbox.payhere.lk/account/">
+                                                    <button type="button" class="btn btn-primary btn-lg btn-rounded text-lg" >
+                                                        <i class="fas fa-money-bill"></i> Buy Now
+                                                    </button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ 
+      

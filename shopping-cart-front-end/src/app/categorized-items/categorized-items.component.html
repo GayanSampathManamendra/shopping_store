@@ -1,0 +1,59 @@
+<div>
+    <app-nav-bar></app-nav-bar>
+</div>
+<div>
+    <div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                        <div class="row">
+                                <div class="col-md-8">
+                                        <select class="browser-default custom-select" aria-placeholder="Select the item category">
+                                            <option value disabled>Select the item category</option>
+                                            <option value="clothes">Clothes</option>
+                                            <option value="electronics">Electronics</option>
+                                            <option value="educational">Educational</option>
+                                        </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <button mdbBtn type="button" color="info" rounded="true" outline="true" mdbWavesEffect>Search</button>
+                                </div>
+                        </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <div class="card card-cascade wider reverse">
+
+        <!-- Card image -->
+        <div class="view view-cascade overlay">
+        <!--heder-->
+            <app-dashboad-header></app-dashboad-header>
+        </div>
+    
+        <div class="card-body card-body-cascade text-center">
+            <div class="card">
+                <div class="card-body">
+                    <h1>Slected Item</h1>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <app-item></app-item>
+                        </div>
+                        <div class="col-md-3">
+                            <app-item></app-item>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

@@ -1,0 +1,104 @@
+<div>
+    <app-supplier-nav-bar></app-supplier-nav-bar>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <div>
+            <div class="row">
+                <div class="col-md 6">
+                        <div class="card-body">
+                                <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" alt="thumbnail" class="img-thumbnail"
+                                style="width: 625px;height: 300px;">
+                        </div>
+                        <div class="card-body">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <figure class="col-md-4">
+                                        <a class="black-text" href="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+                                            data-size="1600x1067">
+                                            <img alt="picture" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+                                            class="img-fluid" />
+                                        </a>
+                                    </figure>
+                                    <figure class="col-md-4">
+                                        <a class="black-text" href="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+                                            data-size="1600x1067">
+                                            <img alt="picture" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+                                            class="img-fluid" />
+                                        </a>
+                                    </figure>
+                                    <figure class="col-md-4">
+                                        <a class="black-text" href="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+                                            data-size="1600x1067">
+                                            <img alt="picture" src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg"
+                                            class="img-fluid" />
+                                        </a>
+                                    </figure>
+                                </div>                
+                            </div>
+                        </div>
+                </div>
+                    
+                <div class="col-md-6">
+                    <div>
+                        <div class="card-body">
+                            <div class="card">
+                                <div class="col-md-10">
+                                    <h3><b><i>{{itemInfo.item_name}}</i></b></h3>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h5>Brand</h5>
+                                                <h5>Category</h5>
+                                                <h5>Price (Rs. )</h5>
+                                                <h5>Description</h5>
+                                                
+
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h5>{{itemInfo.brand}}</h5>
+                                                <h5>{{itemInfo.item_category}}</h5>
+                                                <h5>{{itemInfo.price}}</h5>
+                                                <p>{{itemInfo.description}}</p>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12">
+                                                        <input mdbInput type="number" class="form-control" formControlName="qty" [(ngModel)]="qty" id="inputEmail4" placeholder="Quantity" min=1 value=1>
+                                                        
+                                                    </div>
+                                                    
+                                                </div>
+                                               
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-1"></div>
+                                            <h4>Starting Stock - {{itemInfo.stock}}</h4>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3"></div>
+                                            <div class="row">
+
+                                                <div class="card-body">
+                                                    <a routerLink="/item/remove/{{id}}">
+                                                        <button type="button" class="btn btn-danger btn-lg btn-rounded text-lg">
+                                                            Remove this item
+                                                        </button>
+                                                    </a>
+                                                       
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+

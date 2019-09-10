@@ -1,0 +1,73 @@
+<div>
+    <app-supplier-nav-bar></app-supplier-nav-bar>
+</div>
+<!-- Extended default form grid -->
+<div class="card">
+    <div class="card-body">
+        <div class="card">
+            <div class="card-body">
+                <form [formGroup]="service.Item" (submit)="onSubmit()">
+                        <!-- Grid row -->
+                        <div class="form-row">
+                        <!-- Default input -->
+                        <div class="form-group col-md-6">
+                                <label for="inputEmail4">Item Name</label>
+                            <input mdbInput type="text" class="form-control" formControlName="item_name" id="inputEmail4" placeholder="Item Name">
+                            
+                        </div>
+                        <!-- Default input -->
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Item Brand</label>
+                            <input mdbInput type="text" class="form-control" formControlName="brand" id="inputPassword4" placeholder="Item Brand">
+                            
+                        </div>
+                        </div>
+                        <div class="row">
+                            <!-- Default input -->
+                            <div class="form-group col-md-6">
+                                <label for="inputCity">Stock </label>
+                                <input mdbInput type="number" class="form-control" formControlName="stock" id="inputCity" placeholder=" Ex : 500">
+                                
+                            </div>
+                            <!-- Default input -->
+                            <div class="form-group col-md-6">
+                                <label for="inputZip">Price (Rs.)</label>
+                                <input mdbInput type="number" class="form-control" formControlName="price" id="inputZip" placeholder="750.00">
+                            </div>
+                        </div>
+            
+                        <div>
+                            <div class="form-group col-md-6">
+                                <label for="inputZip">category</label>
+                                <input mdbInput type="text" class="form-control" formControlName="item_category" id="inputZip" placeholder="Ex : clothes">
+                            </div>
+                        </div>
+                    
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- Default input -->
+                                <div class="form-group">
+                                    <label for="inputAddress">Description</label>
+                                    <!--Textarea with icon prefix-->
+                                    <div class="md-form">
+                                            <mdb-icon fas icon="pencil-alt" class="prefix"></mdb-icon>
+                                            <textarea type="text" id="form8" formControlName="description" class="md-textarea form-control" mdbInput></textarea>
+                                            <label for="form8">Type here ..</label>
+                                        </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputAddress">Upload images</label>
+                                <input type="file"  id="inputCity" placeholder="upload images">
+                            </div>
+                        </div>
+            
+                        
+                        <!-- Grid row -->
+                        <button type="submit"  mdbBtn color="primary">Submit</button>
+                    </form>
+                            <!-- Extended default form grid -->
+            </div>
+        </div>
+    </div>
+</div>

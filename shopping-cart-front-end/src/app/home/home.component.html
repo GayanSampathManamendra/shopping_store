@@ -1,0 +1,72 @@
+<header class="h-100">
+      <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark black" [containerInside]="true">
+          <div class="col-md-6"></div>
+          <mdb-navbar-brand>
+              <a class="logo navbar-brand" href="#"><strong>Online Shopping Store</strong></a>
+          </mdb-navbar-brand>
+      
+          <links>
+              <ul class="navbar-nav mr-auto">
+                  <mdb-navbar-brand>
+                      <a class="logo navbar-brand" routerLink="/customer/loginAndSignup" >Customer</a>
+                  </mdb-navbar-brand>
+                  <div class="col-md-6"></div>
+                  <mdb-navbar-brand>
+                      <a class="logo navbar-brand" routerLink="/supplier/loginAndSignup">Supplier</a>
+                  </mdb-navbar-brand>
+              </ul>
+          </links>
+      </mdb-navbar>
+      <!-- Main -->
+      <mdb-carousel [isControls]="true" class="carousel slide" [animation]="'slide'">
+              <mdb-carousel-item>
+                <div class="view">
+                  <video class="video-fluid" autoplay loop>
+                    <source src="https://mdbootstrap.com/img/video/Tropical.mp4" type="video/mp4" />
+                    
+                  </video>
+                  <div  class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+                </div>
+            
+                <div class="carousel-caption">
+                  <div class="animated fadeInDown">
+                    <h3 class="h3-responsive">Light mask</h3>
+                    <p>First text</p>
+                  </div>
+                </div>
+              </mdb-carousel-item>
+              <mdb-carousel-item>
+                <div class="view">
+                  <video class="video-fluid" autoplay loop>
+                    <source src="https://mdbootstrap.com/img/video/animation-intro.mp4" type="video/mp4" />
+                  </video>
+                  <div  class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+                </div>
+            
+                <div class="carousel-caption">
+                  <div class="animated fadeInDown">
+                    <h3 class="h3-responsive">Super light mask</h3>
+                    <p>Secondary text</p>
+                  </div>
+                </div>
+              </mdb-carousel-item>
+              <mdb-carousel-item>
+                <div class="view">
+                  <video class="video-fluid" autoplay loop>
+                    <source src="https://mdbootstrap.com/img/video/Lines.mp4" type="video/mp4" />
+                  </video>
+                  <div class="mask rgba-black-strong waves-light" mdbWavesEffect></div>
+                </div>
+            
+                <div class="carousel-caption">
+                  <div class="animated fadeInDown">
+                    <h3 class="h3-responsive">Strong mask</h3>
+                    <p>Third text</p>
+                  </div>
+                </div>
+              </mdb-carousel-item>
+            </mdb-carousel>
+      <!-- /.Main -->
+</header>
+
+  

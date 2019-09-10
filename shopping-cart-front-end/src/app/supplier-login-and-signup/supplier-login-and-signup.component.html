@@ -1,0 +1,52 @@
+<div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+            <form [formGroup]="service.loginForm" (submit)="login()">
+
+                <div class="card">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <h5>Login</h5>
+                                <div class="card-boady">
+                    
+                                        <input type="text" class="text" formControlName="username" placeholder="user Name"><br><br>
+                                        <input type="password" class="text" formControlName="password" placeholder="password"><br><br>
+                                        <!-- <a routerLink="/loginandsignup/auth">-->
+                                            <button type="submit">Login</button>
+                                        
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-4">
+            <form [formGroup]="service.form" (submit)="onSubmit()">
+
+                <div class="card">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="card-body">
+                                <h3>Sign Up</h3>
+                                <div class="card-boady">
+                        
+                                    <input type="text" class="text" formControlName="username" placeholder="user Name" ><br><br>
+                                    <input type="email" class="text" formControlName="email" placeholder="Email"><br><br>
+                                    <input type="password" class="text" formControlName="password" placeholder="password"><br><br>
+                                    <!--  <a routerLink="/loginandsignup/auth">-->
+                                        <button type="submit">Signup</button>
+                                    
+                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    

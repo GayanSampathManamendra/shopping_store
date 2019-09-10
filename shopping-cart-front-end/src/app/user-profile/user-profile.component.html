@@ -1,0 +1,50 @@
+<div>
+    <app-nav-bar></app-nav-bar>
+</div>
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+                    <div class="col-md-8">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-6">
+                                            <h1>Previous Items</h1>
+                                    </div>
+                                </div>
+                                <hr>
+                                <app-previous-cart-items></app-previous-cart-items>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        
+                        <mdb-card class="testimonial-card">
+                        <!--Bacground color-->
+                        <div class="card-up indigo lighten-1">
+                        </div>
+                    
+                        <!--Avatar-->
+                        <div class="avatar mx-auto">
+                            <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20%2810%29.jpg" class="rounded-circle">
+                        </div>
+                    
+                        <mdb-card-body>
+                            <!--Name-->
+                            <mdb-card-title>
+                            <h4>{{currentUser.user_name}}</h4>
+                            <h4>Gayan Sampath</h4>
+                            </mdb-card-title>
+                            <hr>
+                            <!--Quotation-->
+                            <h5>{{currentUser.email}}</h5>
+                            <p>Customer</p>
+                        </mdb-card-body>
+                        </mdb-card>                
+                </div>
+        </div>
+    </div>
+</div>
+
+<!--Grid row-->

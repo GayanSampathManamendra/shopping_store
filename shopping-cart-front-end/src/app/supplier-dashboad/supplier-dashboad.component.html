@@ -1,0 +1,39 @@
+<div>
+    <app-supplier-nav-bar></app-supplier-nav-bar>
+</div>
+
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <!--for loop start-->
+            <div *ngFor="let item of items">
+                <div class="col-md-5">  
+                    <div class="card">
+                        <a routerLink="/supplier/item/show/{{item.id}}">
+                            <!--Card image-->
+                            <div class="view">
+                                <img src="https://mdbootstrap.com/img/Mockups/Lightbox/Thumbnail/img%20(67).jpg" class="card-img-top"
+                                alt="photo">
+                                <a href="#">
+                                <div class="mask rgba-white-slight"></div>
+                                </a>
+                            </div>
+                        
+                            <!--Card content-->
+                            <div class="card-body">
+                                <!--Title-->
+                                <h4 class="card-title">{{item.item_name}}</h4>
+                                <!--Text-->
+                                <p class="card-text">Rs . {{item.price}}</p>
+                                <a href="#" class="btn btn-primary">show</a>
+                            </div>
+                        </a>
+                    </div>
+                    <!--/.Card-->      
+                </div>
+            </div>
+               <!--for loop end-->
+        </div>
+    </div>
+</div>
+<!--Card-->

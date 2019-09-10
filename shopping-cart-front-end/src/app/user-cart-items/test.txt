@@ -1,0 +1,54 @@
+<input type="hidden" name="merchant_id" formControlName="merchant_id" value="1212553">    <!-- Replace your Merchant ID -->
+                                            <input type="hidden" name="return_url" formControlName="return_url" value="/customer/dashboad">
+                                            <input type="hidden" name="cancel_url" formControlName="cancel_url" value="/item/info/:id">
+                                            <input type="hidden" name="notify_url" formControlName="notify_url" value="/customer/dashboad">  
+                                            
+                                            <input type="hidden" name="order_id" formControlName="order_id" value="1">
+                                            <input type="hidden" name="items" formControlName="items" value="Door bell wireless"><br>
+                                            <input type="hidden" name="currency" formControlName="currency" value="LKR">
+                                            <input type="hidden" name="amount" formControlName="amount" value="50">  
+                                            
+                                            <input type="hidden" name="first_name" formControlName="first_name" value="Saman">
+                                            <input type="hidden" name="last_name" formControlName="last_name" value="Perera"><br>
+                                            <input type="hidden" name="email" formControlName="email" value="samanp@gmail.com">
+                                            <input type="hidden" name="phone" formControlName="phone"  value="0771234567"><br>
+                                            <input type="hidden" name="address" formControlName="address" value="No.1, Galle Road">
+                                            <input type="hidden" name="city" formControlName="city" value="Colombo">
+                                            <input type="hidden" name="country" formControlName="country" value="Sri Lanka"><br><br> 
+
+
+                                            merchant_id:new FormControl('',[Validators.required]),
+    return_url :new FormControl('',[Validators.required]),
+    cancel_url :new FormControl('',[Validators.required]),
+    notify_url :new FormControl('',[Validators.required]),
+    order_id: new FormControl('',[Validators.required]),
+    items: new FormControl('',[Validators.required]),
+    currency :new FormControl('',[Validators.required]),
+    amount: new FormControl('',[Validators.required]),
+    first_name :new FormControl('',[Validators.required]),
+    last_name :new FormControl('',[Validators.required]),
+    email: new FormControl('',[Validators.required]),
+    phone: new FormControl('',[Validators.required]),
+    address :new FormControl('',[Validators.required]),
+    city :new FormControl('',[Validators.required]),
+    country :new FormControl('',[Validators.required]),
+
+
+    const payment={
+      "merchant_id":this.service.cartItem.get('merchant_id').value,
+      "return_url":this.service.cartItem.get('return_url').value,
+      "cancel_url":this.service.cartItem.get('cancel_url').value,
+      "notify_url":this.service.cartItem.get('notify_url').value,
+      "order_id":this.service.cartItem.get('order_id').value,
+      "items":this.service.cartItem.get('items').value,
+      "currency":this.service.cartItem.get('currency').value,
+      "amount":this.service.cartItem.get('amount').value,
+      "first_name":this.service.cartItem.get('first_name').value,
+      "last_name":this.service.cartItem.get('last_name').value,
+      "email":this.service.cartItem.get('email').value,
+      "phone":this.service.cartItem.get('phone').value,
+      "address":this.service.cartItem.get('address').value,
+      "city":this.service.cartItem.get('city').value,
+      "country":this.service.cartItem.get('country').value,
+
+    }
