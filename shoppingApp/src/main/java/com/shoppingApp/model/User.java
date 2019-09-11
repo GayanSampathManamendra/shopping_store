@@ -82,6 +82,11 @@ public class User {
 	public void setIs_loged(int is_loged) {
 		this.is_loged = is_loged;
 	}
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", user_name=" + user_name + ", password=" + password + ", email=" + email + ", role="
+				+ role + ", otp=" + otp + ", is_comformed=" + is_comformed + ", is_loged=" + is_loged + "]";
+	}
 	 
 	
 	
