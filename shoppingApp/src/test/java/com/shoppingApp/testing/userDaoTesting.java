@@ -18,6 +18,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.mockito.stubbing.OngoingStubbing;
@@ -64,8 +65,9 @@ class userDaoTesting {
 		user.setIs_loged(1);
 		user.setRole(1);
 		
-		when(userDao.save(user)).thenReturn(user.getId());
-		//assertEquals(1L,when(userDao.save(user)).thenReturn(user.getId()));
+		userDao.save(user);
+		Mockito.verify(userDao, times(1)).save(user);
+		
 	} 
 	
 	@Test
@@ -128,7 +130,7 @@ class userDaoTesting {
 	      new_user.setUser_name("sampath");
 	      new_user.setIs_loged(1);
 	      
-	      UserDao updated_user=(UserDao) when(userDao.update(current_user.getId(), new_user)).thenReturn(new_user);
+	      User updated_user=(User) Mockito.when(userDao.update(current_user.getId(), new_user)).thenReturn(new_user);
 	      
 	      assertEquals(new_user,updated_user);
 	      
