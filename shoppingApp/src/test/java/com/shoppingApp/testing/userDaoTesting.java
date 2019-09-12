@@ -39,7 +39,7 @@ import org.junit.jupiter.api.Test;
 @RunWith(MockitoJUnitRunner.class)
 class userDaoTesting {
 	
-	static HashMap<String, Object> user_obj = new HashMap<String, Object>();
+	
 	
 	@InjectMocks
 	UserService userService=new UserServiceImple();
