@@ -1,4 +1,4 @@
-package com.shoppingApp.dao;
+ package com.shoppingApp.dao;
 
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class UserDaoImple implements UserDao{
 	}
 
 	@Override
-	public void update(long id, User user) {
+	public User update(long id, User user) {
 		  Session session = sessionFactory.getCurrentSession();
 	      User current_user = session.byId(User.class).load(id);
 	      current_user.setEmail(user.getEmail());
@@ -46,6 +46,7 @@ public class UserDaoImple implements UserDao{
 	      current_user.setUser_name(user.getUser_name());
 	      current_user.setIs_loged(user.getIs_loged());
 	      session.flush();
+	      return current_user;
 		
 	}
 
