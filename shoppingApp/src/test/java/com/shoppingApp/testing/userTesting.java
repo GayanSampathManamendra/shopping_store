@@ -17,12 +17,14 @@ import static org.mockito.Mockito.when;
 import org.junit.Before;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.stubbing.OngoingStubbing;
 import org.springframework.beans.factory.annotation.Autowired;
 
 
@@ -31,6 +33,7 @@ import com.shoppingApp.controller.UserController;
 import com.shoppingApp.dao.UserDao;
 import com.shoppingApp.model.User;
 import com.shoppingApp.service.UserService;
+import com.shoppingApp.service.UserServiceImple;
 
 @RunWith(MockitoJUnitRunner.class)
 class userTesting {
@@ -40,13 +43,14 @@ class userTesting {
 	static HashMap<String, String> usernameAndPasswords = new HashMap<String, String>();
 	
 	@InjectMocks
-	UserService userService;
+	UserService userService=new UserServiceImple();
 	     
 	@Mock
 	UserDao userDao;
 	 
-	@Before
+	@BeforeEach
 	public void init() {
+		System.out.println("mock initialized !");
 	    MockitoAnnotations.initMocks(this);
 	 }
 	
@@ -63,6 +67,8 @@ class userTesting {
 		else {
 			System.out.println("something went wrong when creating new user !");
 		}
+		System.out.println("mock initialized !");
+	    
 		
 	}
 	
@@ -150,8 +156,8 @@ class userTesting {
 		user.setIs_loged(1);
 		user.setRole(1);
 		
-	 	User user1=(User) (when(userDao.save(user)).thenReturn(user.getId()));
-		assertEquals(user.getId(),(when(userDao.save(user)).thenReturn(user.getId())));
+		when(userDao.save(user)).thenReturn(user.getId());
+		//assertEquals(1L,when(userDao.save(user)).thenReturn(user.getId()));
 	} 
 	
 	// test the list method of UserDao ..
