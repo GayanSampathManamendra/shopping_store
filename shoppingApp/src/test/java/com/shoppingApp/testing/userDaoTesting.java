@@ -8,6 +8,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import org.junit.Before;
@@ -38,6 +39,8 @@ import org.junit.jupiter.api.Test;
 @RunWith(MockitoJUnitRunner.class)
 class userDaoTesting {
 	
+	static HashMap<String, Object> user_obj = new HashMap<String, Object>();
+	
 	@InjectMocks
 	UserService userService=new UserServiceImple();
 	     
@@ -55,7 +58,7 @@ class userDaoTesting {
 
 	@Test
 	void testSaveDao() {
-		System.out.println("save method testing ..");
+		System.out.println("save method is working . ..");
 		User user=new User();
 		user.setId(1L);
 		user.setUser_name("Gayan");
@@ -72,7 +75,7 @@ class userDaoTesting {
 	
 	@Test
 	void testList() {
-		System.out.println("List method testing..");
+		System.out.println("List method is working ...");
 		List<User> userList1=new ArrayList<User>();
 		User user1=new User();
 		user1.setId(1L);
@@ -107,9 +110,9 @@ class userDaoTesting {
 	}
 	
 	
-	//@Test
+	@Test
 	void testUpdate() {
-		  System.out.println("Update method testing..");
+		  System.out.println("Update method is working ..");
 		  User current_user=new User();
 		  current_user.setId(1L);
 		  current_user.setEmail("gayan@gmail.com");
@@ -130,12 +133,29 @@ class userDaoTesting {
 	      new_user.setUser_name("sampath");
 	      new_user.setIs_loged(1);
 	      
-	      User updated_user=(User) Mockito.when(userDao.update(current_user.getId(), new_user)).thenReturn(new_user);
-	      
-	      assertEquals(new_user,updated_user);
-	      
+	      userDao.update(current_user.getId(),new_user);
+	      Mockito.verify(userDao, times(1)).update(current_user.getId(),new_user);
+	     
 	      
 	}
+	
+	@Test
+	void testOtp() {
+		System.out.println("Testing otp code is working...");
+		User user=new User();
+		user.setId(1L);
+		user.setEmail("sampath@gmail.com");
+		user.setIs_comformed(1);
+		user.setOtp("oijhsoioijhsfngalkan");
+		user.setPassword("456");
+		user.setRole(1);
+		user.setUser_name("sampath");
+		user.setIs_loged(1);
+		
+		userDao.checkOtp("oijhsoioijhsfngalkan");
+		Mockito.verify(userDao, times(1)).checkOtp("oijhsoioijhsfngalkan");
+	}
+	
 	      
 
 }
